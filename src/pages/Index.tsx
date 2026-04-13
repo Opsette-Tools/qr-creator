@@ -26,7 +26,7 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background shadow-lg">
       {/* Header */}
       <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="mx-auto flex h-14 max-w-lg items-center gap-2 px-4">
@@ -46,7 +46,7 @@ export default function Index() {
 
         {/* Preview */}
         <Card className="shadow-sm">
-          <CardContent className="flex flex-col items-center py-8">
+          <CardContent className="flex flex-col items-center py-8 shadow-xl">
             <QRPreview config={config} />
           </CardContent>
         </Card>
