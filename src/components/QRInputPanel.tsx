@@ -57,7 +57,7 @@ export function QRInputPanel({ config, onChange, onReset }: Props) {
         {!hasContent && (
           <Button
             variant="outline"
-            className="flex-1 min-h-[44px]"
+            className="flex-1 min-h-[44px] rounded-xl active:scale-[0.97] transition-all"
             onClick={() => onChange(DEMO_CONFIG)}
           >
             <Sparkles className="mr-2 h-4 w-4" />
@@ -67,7 +67,7 @@ export function QRInputPanel({ config, onChange, onReset }: Props) {
         {hasContent && (
           <Button
             variant="ghost"
-            className="flex-1 min-h-[44px]"
+            className="flex-1 min-h-[44px] rounded-xl active:scale-[0.97] transition-all"
             onClick={onReset}
           >
             <RotateCcw className="mr-2 h-4 w-4" />

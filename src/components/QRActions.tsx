@@ -45,17 +45,17 @@ export function QRActions({ config, onSave }: Props) {
   };
 
   return (
-    <div className="flex flex-wrap gap-2">
-      <Button disabled={disabled} onClick={handlePng} size="sm" className="flex-1 h-9 text-xs font-medium rounded-full">
-        <Download className="mr-1.5 h-3.5 w-3.5" /> Download PNG
+    <div className="grid grid-cols-4 gap-2">
+      <Button disabled={disabled} onClick={handlePng} size="sm" className="h-10 text-xs font-medium rounded-xl shadow-sm active:scale-[0.97] active:shadow-none transition-all">
+        <Download className="mr-1.5 h-3.5 w-3.5" /> PNG
       </Button>
-      <Button disabled={disabled} onClick={handleSvg} variant="outline" size="sm" className="flex-1 h-9 text-xs font-medium rounded-full">
+      <Button disabled={disabled} onClick={handleSvg} size="sm" className="h-10 text-xs font-medium rounded-xl shadow-sm active:scale-[0.97] active:shadow-none transition-all">
         <Download className="mr-1.5 h-3.5 w-3.5" /> SVG
       </Button>
-      <Button disabled={disabled} onClick={handleCopy} variant="outline" size="sm" className="flex-1 h-9 text-xs font-medium rounded-full">
+      <Button disabled={disabled} onClick={handleCopy} variant="outline" size="sm" className="h-10 text-xs font-medium rounded-xl shadow-sm active:scale-[0.97] active:shadow-none transition-all">
         <Copy className="mr-1.5 h-3.5 w-3.5" /> Copy
       </Button>
-      <Button disabled={disabled} onClick={handleSave} variant="secondary" size="sm" className="flex-1 h-9 text-xs font-medium rounded-full">
+      <Button disabled={disabled} onClick={handleSave} variant="secondary" size="sm" className="h-10 text-xs font-medium rounded-xl shadow-sm active:scale-[0.97] active:shadow-none transition-all">
         <BookmarkPlus className="mr-1.5 h-3.5 w-3.5" /> Save
       </Button>
     </div>

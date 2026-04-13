@@ -65,10 +65,10 @@ export function QRCustomizePanel({ config, onChange }: Props) {
                 <button
                   key={p.value}
                   onClick={() => applyPreset(p.value)}
-                  className={`rounded-lg border p-3 text-left text-xs transition-colors min-h-[44px] ${
+                  className={`rounded-xl border p-3 text-left text-xs transition-all min-h-[44px] active:scale-[0.97] ${
                     config.preset === p.value
-                      ? 'border-primary bg-primary/5'
-                      : 'border-border hover:border-primary/50'
+                      ? 'border-primary bg-primary/5 shadow-[0_0_0_1px_hsl(var(--primary)/0.15)]'
+                      : 'border-border/60 hover:border-primary/40'
                   }`}
                 >
                   <div className="font-medium">{p.label}</div>

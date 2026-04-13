@@ -18,7 +18,7 @@ export function QRLibrary({ library, onLoad, onDelete }: Props) {
         {library.map(entry => (
           <div
             key={entry.id}
-            className="flex items-center gap-3 rounded-lg border bg-card p-3"
+            className="flex items-center gap-3 rounded-xl border-0 bg-card p-3 shadow-sm transition-all hover:shadow-md"
           >
             <button
               className="flex-1 text-left min-h-[44px] flex flex-col justify-center"

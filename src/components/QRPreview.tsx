@@ -130,8 +130,8 @@ export function QRPreview({ config }: Props) {
 
   if (!validUrl) {
     return (
-      <div className="flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-border p-10 text-center min-h-[280px]">
-        <QrCode className="h-12 w-12 text-muted-foreground/40 mb-3" />
+      <div className="flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-border p-10 text-center min-h-[280px] bg-muted/40">
+        <QrCode className="h-10 w-10 text-muted-foreground/40 mb-3" />
         <p className="text-sm text-muted-foreground">
           Enter a URL to generate your QR code
         </p>
