@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { QRInputPanel } from '@/components/QRInputPanel';
 import { QRCustomizePanel } from '@/components/QRCustomizePanel';
 import { QRPreview } from '@/components/QRPreview';
@@ -31,6 +32,7 @@ function AppLogo({ className }: { className?: string }) {
 }
 
 export default function Index() {
+  const navigate = useNavigate();
   const [config, setConfig] = useState<QRConfig>({ ...DEFAULT_CONFIG });
   const { library, saveConfig, deleteEntry } = useQRLibrary();
 
@@ -83,6 +85,19 @@ export default function Index() {
 
         {/* Library */}
         <QRLibrary library={library} onLoad={handleLoad} onDelete={deleteEntry} />
+
+        <footer className="flex items-center justify-center gap-1.5 py-3">
+          <button onClick={() => navigate('/about')} className="text-xs text-muted-foreground hover:text-foreground transition-colors">About</button>
+          <span className="text-muted-foreground/40">·</span>
+          <button onClick={() => navigate('/privacy')} className="text-xs text-muted-foreground hover:text-foreground transition-colors">Privacy</button>
+          <span className="text-muted-foreground/40">·</span>
+          <span className="text-xs text-muted-foreground">
+            By{' '}
+            <a href="https://opsette.io" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors">
+              Opsette
+            </a>
+          </span>
+        </footer>
       </main>
     </div>
   );
