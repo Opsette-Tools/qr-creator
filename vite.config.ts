@@ -19,35 +19,10 @@ export default defineConfig(({ command }) => ({
       devOptions: {
         enabled: false,
       },
+      manifest: false,
       workbox: {
+        navigateFallback: "index.html",
         navigateFallbackDenylist: [/^\/~oauth/],
-      },
-      manifest: {
-        name: "QR Creator",
-        short_name: "QR Creator",
-        description: "Generate styled, downloadable QR codes for your business",
-        start_url: ".",
-        display: "standalone",
-        background_color: "#ffffff",
-        theme_color: "#ffffff",
-        icons: [
-          {
-            src: "/icon-192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "/icon-512.png",
-            sizes: "512x512",
-            type: "image/png",
-          },
-          {
-            src: "/icon-512.png",
-            sizes: "512x512",
-            type: "image/png",
-            purpose: "maskable",
-          },
-        ],
       },
     }),
   ].filter(Boolean),
